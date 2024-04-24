@@ -4,6 +4,7 @@ use App\Http\Controllers\AplikasiController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\IpAddressController;
 use App\Http\Controllers\JenisController;
 use App\Http\Controllers\KerusakanKomputerController;
 use App\Http\Controllers\KomponenController;
@@ -54,6 +55,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('users/data', [UserController::class, 'data'])->name('users.data');
     Route::resource('users', UserController::class)->except('create', 'edit', 'update');
+
+    Route::get('ipaddress/data', [IpAddressController::class, 'data'])->name('ipaddress.data');
+    Route::resource('ipaddress', IpAddressController::class)->except('create', 'edit', 'update');
 
     Route::get('jenis/data', [JenisController::class, 'data'])->name('jenis.data');
     Route::resource('jenis', JenisController::class)->except('create', 'edit', 'update');

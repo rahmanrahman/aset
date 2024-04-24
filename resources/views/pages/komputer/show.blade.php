@@ -53,7 +53,7 @@
                             <label for='department' class='mb-2'>Department</label>
                             <input type='text' name='department' id='department'
                                 class='form-control @error('department') is-invalid @enderror'
-                                value='{{ $item->department->nama ?? '-' }}' readonly>
+                                value='{{ $item->department->nama ??'-'}}' readonly>
                             @error('department')
                                 <div class='invalid-feedback'>
                                     {{ $message }}

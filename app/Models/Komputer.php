@@ -29,6 +29,11 @@ class Komputer extends Model
         return $this->belongsTo(SistemOperasi::class, 'sistem_operasi_id', 'id');
     }
 
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'department_id', 'id');
+    }
+
     public function ip_address()
     {
         return $this->belongsTo(IpAddress::class, 'ip_address_id', 'id');
